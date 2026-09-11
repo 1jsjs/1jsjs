@@ -1,9 +1,9 @@
 <p align="right"><a href="https://github.com/1jsjs">English</a> &nbsp; / &nbsp; <strong>한국어</strong></p>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.svg" />
-  <img src="./assets/hero-light.svg" width="100%" alt="Jinsu Park — Ideas into interfaces. AI applications, web and macOS." />
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark-ko.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light-ko.svg" />
+  <img src="./assets/hero-light-ko.svg" width="100%" alt="박진수 — 아이디어를 화면으로. AI 앱, 웹, macOS 개발." />
 </picture>
 
 <br/>
@@ -18,7 +18,7 @@
 <tr>
 <td width="50%" valign="top">
 
-<a href="https://github.com/1jsjs/sobi-tribunal"><img src="./assets/sobi.svg" width="100%" alt="소비 재판소" /></a>
+<a href="https://github.com/1jsjs/sobi-tribunal"><img src="./assets/sobi-ko.svg" width="100%" alt="소비 재판소" /></a>
 
 ### 소비 재판소
 
@@ -35,7 +35,7 @@
 </td>
 <td width="50%" valign="top">
 
-<a href="https://parkjinsu-portfolio.vercel.app/case-studies/speakup"><img src="./assets/speakup.svg" width="100%" alt="SpeakUp" /></a>
+<a href="https://parkjinsu-portfolio.vercel.app/case-studies/speakup"><img src="./assets/speakup-ko.svg" width="100%" alt="스피크업" /></a>
 
 ### SpeakUp
 
@@ -43,7 +43,7 @@
 
 **담당:** STT/LLM 연동·코칭 엔진·리포트. 3인 팀 프로젝트.
 
-`Speech APIs` `LLM integration`
+`음성 API` `LLM 연동`
 
 <sub>JBNU AI·SW 경진대회 SW부문 동상</sub>
 
@@ -54,7 +54,7 @@
 <tr>
 <td width="50%" valign="top">
 
-<a href="https://parkjinsu-portfolio.vercel.app/case-studies/vispresso"><img src="./assets/vispresso.svg" width="100%" alt="Vispresso" /></a>
+<a href="https://parkjinsu-portfolio.vercel.app/case-studies/vispresso"><img src="./assets/vispresso-ko.svg" width="100%" alt="비스프레소" /></a>
 
 ### Vispresso
 
@@ -62,7 +62,7 @@ AI 영상 편집 결과를 사람이 확인하고 조정하는 화면. 원본 �
 
 **담당:** 프론트엔드. 전주MBC 산학 연계, 4인 팀 프로젝트.
 
-`Video interfaces` `Timeline editing`
+`영상 인터페이스` `타임라인 편집`
 
 <sub>SW캡스톤디자인 경진대회 우수상</sub>
 
@@ -71,7 +71,7 @@ AI 영상 편집 결과를 사람이 확인하고 조정하는 화면. 원본 �
 </td>
 <td width="50%" valign="top">
 
-<a href="https://github.com/1jsjs/thumbstap"><img src="./assets/thumbstap.svg" width="100%" alt="Thumbstap" /></a>
+<a href="https://github.com/1jsjs/thumbstap"><img src="./assets/thumbstap-ko.svg" width="100%" alt="썸스탭" /></a>
 
 ### Thumbstap
 
