@@ -1,142 +1,118 @@
-<div align="center">
+<p align="right"><strong>English</strong> &nbsp; / &nbsp; <a href="./README.ko.md">한국어</a></p>
 
-<strong>English</strong> · <a href="./README.ko.md">한국어</a>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.svg" />
+  <img src="./assets/hero-light.svg" width="100%" alt="Jinsu Park — Ideas into interfaces. AI applications, web and macOS." />
+</picture>
 
+<br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&amp;color=0:0D1117,100:16324F&amp;height=180&amp;text=PARK%20JINSU&amp;fontSize=46&amp;fontColor=FFFFFF&amp;desc=AI%20Products%20%C2%B7%20Web%20%C2%B7%20macOS&amp;descSize=18&amp;descAlignY=72" width="100%" alt="Park Jinsu — AI Products, Web, macOS" />
+**I build the parts that make AI usable.** Interfaces, APIs, and the connections between them.
 
-### Turning ideas into interfaces, APIs, and working products.
+[**Portfolio**](https://parkjinsu-portfolio.vercel.app) &nbsp; / &nbsp; [**Resume**](https://parkjinsu-portfolio.vercel.app/cv) &nbsp; / &nbsp; [**jinsu.build@gmail.com**](mailto:jinsu.build@gmail.com)
 
-I build AI-powered applications across web and macOS.
-
-<a href="https://parkjinsu-portfolio.vercel.app"><img src="https://img.shields.io/badge/Portfolio-2563EB?style=for-the-badge&amp;logo=googlechrome&amp;logoColor=white" alt="Portfolio" /></a>
-<a href="https://parkjinsu-portfolio.vercel.app/cv"><img src="https://img.shields.io/badge/Resume-334155?style=for-the-badge&amp;logo=readme&amp;logoColor=white" alt="Resume" /></a>
-<a href="mailto:jinsu.build@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" alt="Email" /></a>
-
-<br/><br/>
-
-[About](#about) · [Projects](#selected-projects) · [Stack](#tech-stack) · [Open Source](#open-source) · [Learning](#currently-learning)
-
-</div>
-
-## About
-
-Hi, I'm **Jinsu Park**. I build interfaces, APIs, and data flows for AI applications, along with practical tools for web and macOS.
-
-- **Build** — I work across LLM and speech APIs, frontend, backend, and deployment.
-- **Own** — For Sobi Tribunal, I handled product planning, infrastructure, and the entire implementation of v1 and v2.
-- **Learn** — I am a Jeonbuk National University student, currently on leave and studying at Furiosa AI Agent School.
-- **Connect** — I am seeking **internship opportunities** in AI application development and full-stack engineering.
-
-## Selected Projects
+## Selected work
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### 01 / Sobi Tribunal
-**Photo-based AI spending reflection**
+<a href="https://github.com/1jsjs/sobi-tribunal"><img src="./assets/sobi.svg" width="100%" alt="Sobi Tribunal" /></a>
 
-A service that turns purchase photos into questions, verdicts, and reflection. I separated rule-based decisions from LLM-generated explanations.
+### Sobi Tribunal
 
-**Team of 5 · My role: planning, infrastructure, all v1/v2 development**
+Photo-based spending reflection with rule-based verdicts and LLM explanations.
 
-`Python` `FastAPI` `Bedrock` `EC2` `S3`
+**My role:** planning, infrastructure, all v1/v2 development. Team of 5.
 
-🏅 Encouragement Award · Honam SW-centered Universities LLM Hackathon
+`FastAPI` `Bedrock` `EC2 / S3`
 
-[Source ↗](https://github.com/1jsjs/sobi-tribunal) · [Case study ↗](https://parkjinsu-portfolio.vercel.app/case-studies/sobi-tribunal)
+<sub>Encouragement Award · Honam LLM Hackathon</sub>
+
+[Code](https://github.com/1jsjs/sobi-tribunal) · [Story](https://parkjinsu-portfolio.vercel.app/case-studies/sobi-tribunal)
 
 </td>
 <td width="50%" valign="top">
 
-### 02 / SpeakUp
-**AI speaking coach**
+<a href="https://parkjinsu-portfolio.vercel.app/case-studies/speakup"><img src="./assets/speakup.svg" width="100%" alt="SpeakUp" /></a>
 
-A coaching engine connecting speech recognition and LLMs. I implemented report replay and MP4 export so users can revisit their sessions.
+### SpeakUp
 
-**Team of 3 · My role: STT/LLM, coaching engine, reports**
+Speech recognition and LLM coaching, with session replay and MP4 export.
 
-`Speech-to-Text` `LLM APIs` `Web`
+**My role:** STT/LLM integration, coaching engine, reports. Team of 3.
 
-🥉 Bronze Award · Software division, JBNU AI & SW Competition
+`Speech APIs` `LLM integration`
 
-[Case study ↗](https://parkjinsu-portfolio.vercel.app/case-studies/speakup)
+<sub>Bronze Award · JBNU AI & SW Competition, software division</sub>
+
+[Story](https://parkjinsu-portfolio.vercel.app/case-studies/speakup)
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### 03 / Vispresso
-**Long-form → short-form video review workbench**
+<a href="https://parkjinsu-portfolio.vercel.app/case-studies/vispresso"><img src="./assets/vispresso.svg" width="100%" alt="Vispresso" /></a>
 
-A frontend for reviewing and adjusting AI-generated edits. I built the source preview, timeline, and editing-range review interface.
+### Vispresso
 
-**Team of 4 · My role: frontend · Industry project with Jeonju MBC**
+A workspace for reviewing AI video edits: source preview, timeline, and edit ranges.
 
-`Frontend` `Video Preview` `Timeline UI`
+**My role:** frontend. Team of 4, in collaboration with Jeonju MBC.
 
-🏅 Excellence Award · Software Capstone Design Competition
+`Video interfaces` `Timeline editing`
 
-[Case study ↗](https://parkjinsu-portfolio.vercel.app/case-studies/vispresso)
+<sub>Excellence Award · Software Capstone Design Competition</sub>
+
+[Story](https://parkjinsu-portfolio.vercel.app/case-studies/vispresso)
 
 </td>
 <td width="50%" valign="top">
 
-### 04 / Thumbstap
-**Thumb-gesture launcher for macOS**
+<a href="https://github.com/1jsjs/thumbstap"><img src="./assets/thumbstap.svg" width="100%" alt="Thumbstap" /></a>
 
-A tool that opens an app grid with a thumb double-tap on the trackpad. I implemented gesture detection and user calibration, and released the app.
+### Thumbstap
 
-**Solo project · Design, development, distribution**
+An app grid, a thumb double-tap away. Gesture detection and calibration for macOS.
 
-`Swift` `SwiftUI` `macOS` `Homebrew`
+**My role:** design, development, distribution. Solo project.
 
-📦 MIT open source · Install via Homebrew
+`Swift / SwiftUI` `Homebrew`
 
-[Source & install ↗](https://github.com/1jsjs/thumbstap)
+<sub>Open source · MIT license</sub>
+
+[Code & install](https://github.com/1jsjs/thumbstap)
 
 </td>
 </tr>
 </table>
 
-## Tech Stack
+## Beyond my own repos
 
-Technologies I have used in projects.
+**[Apple / coremltools](https://github.com/apple/coremltools/pull/2736)** &nbsp; · &nbsp; Merged, June 2026
 
-**Languages & applications**
+Fixed `layer_norm` beta shape validation and updated its regression test.
 
-<img src="https://skillicons.dev/icons?i=python,typescript,javascript,swift,react,nextjs&amp;theme=dark" alt="Python, TypeScript, JavaScript, Swift, React, Next.js" />
+## What I work with
 
-**Backend & infrastructure**
+**Interfaces** &nbsp; React, Next.js, TypeScript, SwiftUI<br/>
+**Services** &nbsp; Python, FastAPI, Node.js, SQLite<br/>
+**AI & deployment** &nbsp; OpenAI, Gemini, Amazon Bedrock, EC2, S3, Docker
 
-<img src="https://skillicons.dev/icons?i=fastapi,nodejs,sqlite,aws,docker,git&amp;theme=dark" alt="FastAPI, Node.js, SQLite, AWS, Docker, Git" />
+<details>
+<summary>What I'm learning now</summary>
 
-**AI integration** — OpenAI · Gemini · Amazon Bedrock · STT/LLM integration · Structured outputs · Response validation & fallbacks
+Machine learning fundamentals, LLMs, and RAG at **Furiosa AI Agent School**. I keep the practice code in [furiosa-practice](https://github.com/1jsjs/furiosa-practice).
 
-## Open Source
+Jeonbuk National University student, currently on leave.
 
-### Apple / coremltools
-
-[Fix layer_norm beta shape validation — PR #2736 ↗](https://github.com/apple/coremltools/pull/2736)
-
-Fixed a shape-validation bug in the model conversion toolkit and updated the regression test. **Merged · June 2026**
-
-## Currently Learning
-
-**Machine learning fundamentals → LLMs & RAG → AI applications**
-
-I practice the material from Furiosa AI Agent School in code and document the concepts I learn.
-
-[Learning notes & practice ↗](https://github.com/1jsjs/furiosa-practice)
+</details>
 
 ---
 
-<div align="center">
+**Have something worth building?**<br/>
+I'm looking for internships in AI application development and full-stack engineering.
 
-**Open to opportunities to build together.**
-
-[Portfolio](https://parkjinsu-portfolio.vercel.app) · [Download CV](https://parkjinsu-portfolio.vercel.app/cv.pdf) · [Get in touch](mailto:jinsu.build@gmail.com)
-
-</div>
+[Let's talk](mailto:jinsu.build@gmail.com) &nbsp; / &nbsp; [Download CV](https://parkjinsu-portfolio.vercel.app/cv.pdf)
