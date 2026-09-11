@@ -3,116 +3,90 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.svg" />
-  <img src="./assets/hero-light.svg" width="100%" alt="Jinsu Park — Ideas into interfaces. AI applications, web and macOS." />
+  <img src="./assets/hero-light.svg" width="100%" alt="Jinsu Park. Web apps and macOS tools." />
 </picture>
 
 <br/>
 
-**I build the parts that make AI usable.** Interfaces, APIs, and the connections between them.
+Hi, I'm Jinsu. I build web apps and macOS tools. My recent work includes a trackpad launcher, speech coaching, and interfaces for reviewing video edits.
 
-[**Portfolio**](https://parkjinsu-portfolio.vercel.app) &nbsp; / &nbsp; [**Resume**](https://parkjinsu-portfolio.vercel.app/cv) &nbsp; / &nbsp; [**jinsu.build@gmail.com**](mailto:jinsu.build@gmail.com)
+[Portfolio](https://parkjinsu-portfolio.vercel.app) &nbsp; / &nbsp; [Resume](https://parkjinsu-portfolio.vercel.app/cv) &nbsp; / &nbsp; [jinsu.build@gmail.com](mailto:jinsu.build@gmail.com)
 
-## Selected work
+I also contributed a [merged fix to Apple’s coremltools](https://github.com/apple/coremltools/pull/2736): correcting `layer_norm` beta shape validation and updating the regression test.
 
-<table>
-<tr>
-<td width="50%" valign="top">
+## Thumbstap
 
-<a href="https://github.com/1jsjs/sobi-tribunal"><img src="./assets/sobi.svg" width="100%" alt="Sobi Tribunal" /></a>
+<a href="https://github.com/1jsjs/thumbstap"><img src="./assets/cutaway/thumbstap.png" width="100%" alt="Thumbstap illustration: an elliptical thumb contact connects a trackpad to gesture calibration and a frosted app grid." /></a>
 
-### Sobi Tribunal
+Double-tap your thumb on the trackpad to open an app grid. I designed, built, and released this macOS app on my own.
 
-Photo-based spending reflection with rule-based verdicts and LLM explanations.
+The gesture detector uses the shape of the touch contact to distinguish a thumb from a fingertip. Calibration adjusts it for the user; the SwiftUI launcher provides search and app arrangement.
 
-**My role:** planning, infrastructure, all v1/v2 development. Team of 5.
+`Swift` `SwiftUI` `Homebrew` &nbsp; Open source, MIT
 
-`FastAPI` `Bedrock` `EC2 / S3`
+[Gesture detection](https://github.com/1jsjs/thumbstap/blob/178c9c6/Sources/Thumbstap/Thumbstap.swift) · [Calibration](https://github.com/1jsjs/thumbstap/blob/178c9c6/Sources/Thumbstap/Calibration.swift) · [App grid](https://github.com/1jsjs/thumbstap/blob/178c9c6/Sources/ThumbstapApp/AppGridView.swift) · [Install](https://github.com/1jsjs/thumbstap#install)
 
-<sub>Encouragement Award · Honam LLM Hackathon</sub>
+## Sobi Tribunal
 
-[Code](https://github.com/1jsjs/sobi-tribunal) · [Story](https://parkjinsu-portfolio.vercel.app/case-studies/sobi-tribunal)
+<a href="https://github.com/1jsjs/sobi-tribunal"><img src="./assets/cutaway/sobi.png" width="100%" alt="Sobi Tribunal illustration: its pig judge and courtroom connect purchase evidence, questions, verdict rules, and an explanation." /></a>
 
-</td>
-<td width="50%" valign="top">
+A pig judge questions your purchases. You submit a photo, answer questions, and get a verdict to help you reflect on your spending.
 
-<a href="https://parkjinsu-portfolio.vercel.app/case-studies/speakup"><img src="./assets/speakup.svg" width="100%" alt="SpeakUp" /></a>
+We entered the hackathon as a team of five. I planned the product, set up the infrastructure, and wrote all of v1 and v2. Rules determine the verdict; an LLM writes the explanation.
 
-### SpeakUp
+`FastAPI` `SQLite` `Amazon Bedrock` `EC2 / S3`
 
-Speech recognition and LLM coaching, with session replay and MP4 export.
+Encouragement Award, Honam LLM Hackathon.
 
-**My role:** STT/LLM integration, coaching engine, reports. Team of 3.
+[Verdict logic](https://github.com/1jsjs/sobi-tribunal/blob/c25efc3/services/verdict_service.py) · [Model integration](https://github.com/1jsjs/sobi-tribunal/blob/c25efc3/services/llm_service.py) · [Project details](https://parkjinsu-portfolio.vercel.app/case-studies/sobi-tribunal)
 
-`Speech APIs` `LLM integration`
+## SpeakUp
 
-<sub>Bronze Award · JBNU AI & SW Competition, software division</sub>
+<a href="https://github.com/eecczz/speech-coach"><img src="./assets/cutaway/speakup.png" width="100%" alt="SpeakUp illustration: speech and transcript segments connect to coaching feedback, a replay viewer, and MP4 export." /></a>
 
-[Story](https://parkjinsu-portfolio.vercel.app/case-studies/speakup)
+A speaking coach that connects feedback to the recording, so you can go back and hear the moment being discussed.
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+On this team of three, I built the STT/LLM integration and coaching engine. I also added report replay and MP4 export.
 
-<a href="https://parkjinsu-portfolio.vercel.app/case-studies/vispresso"><img src="./assets/vispresso.svg" width="100%" alt="Vispresso" /></a>
+`Speech APIs` `LLM integration` `TypeScript`
 
-### Vispresso
+Bronze Award, JBNU AI & SW Competition, software division.
 
-A workspace for reviewing AI video edits: source preview, timeline, and edit ranges.
+[Coaching engine](https://github.com/eecczz/speech-coach/blob/007b080/apps/web/src/realtime-coaching.ts) · [Replay and export](https://github.com/eecczz/speech-coach/blob/007b080/apps/web/src/report-page.ts) · [Project details](https://parkjinsu-portfolio.vercel.app/case-studies/speakup)
 
-**My role:** frontend. Team of 4, in collaboration with Jeonju MBC.
+## Vispresso
 
-`Video interfaces` `Timeline editing`
+<a href="https://github.com/Me1e/jbnu_capstone_vispresso"><img src="./assets/cutaway/vispresso.png" width="100%" alt="Vispresso illustration: the source preview, selected clip, and trim timeline are separated into aligned interface layers." /></a>
 
-<sub>Excellence Award · Software Capstone Design Competition</sub>
+A video-editing tool developed with Jeonju MBC. It lets an editor review and adjust AI-suggested clips.
 
-[Story](https://parkjinsu-portfolio.vercel.app/case-studies/vispresso)
+I handled the frontend on a team of four. I built the source preview, timeline, and in/out editing controls used to check those suggestions.
 
-</td>
-<td width="50%" valign="top">
+`TypeScript` `Video interfaces` `Timeline editing`
 
-<a href="https://github.com/1jsjs/thumbstap"><img src="./assets/thumbstap.svg" width="100%" alt="Thumbstap" /></a>
+Excellence Award, Software Capstone Design Competition.
 
-### Thumbstap
+[Review workbench](https://github.com/Me1e/jbnu_capstone_vispresso/blob/9a8ae50/src/components/job-space/segment-review-v2.tsx) · [Timeline controls](https://github.com/Me1e/jbnu_capstone_vispresso/blob/9a8ae50/src/lib/editor-timeline.ts) · [Project details](https://parkjinsu-portfolio.vercel.app/case-studies/vispresso)
 
-An app grid, a thumb double-tap away. Gesture detection and calibration for macOS.
+<sub>The images are illustrations based on the projects’ interfaces and features. The source links show the implementation.</sub>
 
-**My role:** design, development, distribution. Solo project.
+## Tools I use
 
-`Swift / SwiftUI` `Homebrew`
-
-<sub>Open source · MIT license</sub>
-
-[Code & install](https://github.com/1jsjs/thumbstap)
-
-</td>
-</tr>
-</table>
-
-## Beyond my own repos
-
-**[Apple / coremltools](https://github.com/apple/coremltools/pull/2736)** &nbsp; · &nbsp; Merged, June 2026
-
-Fixed `layer_norm` beta shape validation and updated its regression test.
-
-## What I work with
-
-**Interfaces** &nbsp; React, Next.js, TypeScript, SwiftUI<br/>
-**Services** &nbsp; Python, FastAPI, Node.js, SQLite<br/>
-**AI & deployment** &nbsp; OpenAI, Gemini, Amazon Bedrock, EC2, S3, Docker
+Frontend: React, Next.js, TypeScript, SwiftUI<br/>
+Backend: Python, FastAPI, Node.js, SQLite<br/>
+AI APIs and deployment: OpenAI, Gemini, Amazon Bedrock, EC2, S3, Docker
 
 <details>
 <summary>What I'm learning now</summary>
 
-Machine learning fundamentals, LLMs, and RAG at **Furiosa AI Agent School**. I keep the practice code in [furiosa-practice](https://github.com/1jsjs/furiosa-practice).
+I'm studying machine learning fundamentals, LLMs, and RAG at Furiosa AI Agent School. My practice code is in [furiosa-practice](https://github.com/1jsjs/furiosa-practice).
 
-Jeonbuk National University student, currently on leave.
+I'm a Jeonbuk National University student, currently on leave.
 
 </details>
 
 ---
 
-**Have something worth building?**<br/>
-I'm looking for internships in AI application development and full-stack engineering.
+I'm looking for an internship in AI application development or full-stack engineering.
 
-[Let's talk](mailto:jinsu.build@gmail.com) &nbsp; / &nbsp; [Download CV](https://parkjinsu-portfolio.vercel.app/cv.pdf)
+[Email me](mailto:jinsu.build@gmail.com) &nbsp; / &nbsp; [Download CV](https://parkjinsu-portfolio.vercel.app/cv.pdf)

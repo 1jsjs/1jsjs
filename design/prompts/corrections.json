@@ -1,0 +1,10 @@
+[
+  {
+    "key": "speakup",
+    "prompt": "Edit this portfolio illustration only to remove the three English section labels 'Clarity', 'Structure', 'Delivery' from the middle coaching plane. Replace each label with one short dark-plum abstract horizontal heading line matching the other text-placeholder lines. Preserve ALL composition, colors, lighting, waveform, connector routing, timestamps, text 'SpeakUp' and 'MP4', replay screen, perspectives and every other detail exactly. Final art must be language-neutral for English and Korean profile versions. No new text or other modifications."
+  },
+  {
+    "key": "thumbstap",
+    "prompt": "Edit only the app icon grid in this portfolio illustration. The real app uses exactly SEVEN columns and SIX rows, so make 42 generic app tiles in a 7 by 6 grid on the top frosted launcher plane. Current picture has five rows; add one row and adjust grid spacing just enough to fit within the same outer plane. Keep the search field, page dots, single highlighted tile, fine connector, lower contact-ellipse calibration plane, silver trackpad, contact rings, overall camera perspective, lighting, palette and composition unchanged. No new text or logos."
+  }
+]

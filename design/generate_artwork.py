@@ -1,145 +1,42 @@
-"""Generate self-contained profile artwork. Requires fonttools, Avenir Next and Apple SD Gothic Neo on macOS.
-No font binaries or third-party image services are used by the published README.
+"""Generate bilingual outlined headers; final project art is in assets/cutaway.
+Requires fonttools and the system fonts below. Never copies font binaries.
 """
 from pathlib import Path
 from html import escape
-import math
-import re
 from fontTools.ttLib import TTCollection
 from fontTools.pens.svgPathPen import SVGPathPen
 from fontTools.pens.transformPen import TransformPen
 
 OUT = Path(__file__).resolve().parents[1] / 'assets'
-FONTS = TTCollection('/System/Library/Fonts/Avenir Next.ttc').fonts
-KO_FONTS = TTCollection('/System/Library/Fonts/AppleSDGothicNeo.ttc').fonts
-LANG = 'en'
-KO_COPY = {
-    'Jinsu Park': '박진수',
-    'From first sketch to working code.': '첫 스케치부터 동작하는 코드까지.',
-    'Ideas into': '아이디어를',
-    'interfaces.': '화면으로.',
-    'AI applications, web & macOS.': 'AI 서비스와 웹·macOS 앱을 만듭니다.',
-    'Sobi Tribunal': '소비 재판소',
-    'A second look at spending.': '소비를 다시 바라보다.',
-    'Think twice.': '한 번 더 생각.',
-    'Reflect, then decide.': '돌아보고 결정하기',
-    'SpeakUp': '스피크업',
-    'Find your voice. Play it back.': '말하고, 듣고, 더 나아지다.',
-    'Vispresso': '비스프레소',
-    'A clearer cut.': '더 명확한 장면으로.',
-    'Thumbstap': '썸스탭',
-    'One gesture. Everything in reach.': '한 번의 제스처로, 바로 손끝에.',
-    'Jinsu Park. Ideas into interfaces.': '박진수. 아이디어를 화면으로.',
-    'AI applications, web and macOS. A wireframe becomes a working interface; jinsu.build.': 'AI 앱, 웹, macOS 개발. 와이어프레임이 동작하는 화면으로 바뀌는 모습. jinsu.build.',
-    'Project artwork: a receipt invites the user to reflect before deciding. Planning, infrastructure and full v1/v2 implementation.': '소비 재판소 소개 그래픽. 영수증을 보며 소비를 돌아보고 결정하는 모습. 기획, 인프라, v1과 v2 전체 구현.',
-    'Project artwork: speech waveforms and playback. Speech recognition, LLM coaching and report replay.': '스피크업 소개 그래픽. 음성 파형과 재생 버튼. 음성 인식, LLM 코칭, 리포트 다시 보기.',
-    'Project artwork: a filmstrip becomes a vertical edit. Frontend for video preview, timelines and review.': '비스프레소 소개 그래픽. 필름이 세로 영상으로 편집되는 모습. 영상 미리보기, 타임라인, 검수 화면.',
-    'Project artwork: a thumb gesture on a trackpad opens an app grid. A Swift macOS utility.': '썸스탭 소개 그래픽. 트랙패드의 엄지 제스처로 앱 격자를 여는 모습. Swift로 개발한 macOS 도구.',
-}
+EN = TTCollection('/System/Library/Fonts/Avenir Next.ttc').fonts
+KO = TTCollection('/System/Library/Fonts/AppleSDGothicNeo.ttc').fonts
 
-INK, BLUE, PAPER, MUTED = '#142C42', '#2356F6', '#EEF2F6', '#566B7D'
+def text_path(text, x, y, size, font, fill, stroke=None):
+    scale = size / font['head'].unitsPerEm
+    glyphs = font.getGlyphSet()
+    cmap = font.getBestCmap()
+    pen = SVGPathPen(glyphs)
+    for c in text:
+        glyph = cmap[ord(c)]
+        glyphs[glyph].draw(TransformPen(pen, (scale, 0, 0, -scale, x, y)))
+        x += font['hmtx'][glyph][0] * scale
+    outline = f' stroke="{stroke}" stroke-width="0.9"' if stroke else ''
+    return f'<path fill="{fill}"{outline} d="{pen.getCommands()}"/>'
 
-def letters(s,x,y,size,color=INK,bold=False,tracking=0):
-    if LANG == 'ko':
-        s = KO_COPY.get(s, s)
-    korean = any('가' <= c <= '힣' for c in s)
-    f = KO_FONTS[6 if bold else 0] if korean else FONTS[0 if bold else 2]
-    scale=size/f['head'].unitsPerEm
-    gs=f.getGlyphSet(); cmap=f.getBestCmap(); pen=SVGPathPen(gs)
-    for c in s:
-        name=cmap[ord(c)]
-        gs[name].draw(TransformPen(pen,(scale,0,0,-scale,x,y)))
-        x+=f['hmtx'][name][0]*scale+tracking
-    return f'<path fill="{color}" d="{pen.getCommands()}"/>'
-
-def svg(name,w,h,body,title,desc):
-    if LANG == 'ko':
-        name += '-ko'
-        title, desc = KO_COPY.get(title, title), KO_COPY.get(desc, desc)
-    content=f'''<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" fill="none" role="img" aria-labelledby="title desc">
-<title id="title">{escape(title)}</title><desc id="desc">{escape(desc)}</desc>
-{body}
-</svg>'''
-    content=re.sub(r'-?\d+\.\d{4,}', lambda m: str(round(float(m[0]), 3)), content)
-    (OUT/f'{name}.svg').write_text(content)
-
-def rect(x,y,w,h,fill,rx=0,stroke=None):
-    return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{rx}" fill="{fill}"'+(f' stroke="{stroke}"' if stroke else '')+'/>'
-
-# Design plan: cool porcelain, cobalt, slate, periwinkle, and muted coral.
-# One expressive hero; the rest is a restrained gallery of project-specific art.
-# Critique: removed badges, decorative counters, card numbers and generic gradients.
-# Theme-specific hero keeps contrast; project art has its own opaque background.
-for LANG in ('en', 'ko'):
-    for theme in ['light','dark']:
-        bg,fg,sub,line = (PAPER,INK,MUTED,'#CED7E1') if theme=='light' else ('#152432','#F2F6FC','#ADC0D2','#384B5D')
-        b=rect(0,0,960,432,bg,16)
-        b+=letters('Jinsu Park',40,54,25,fg,True)+letters('From first sketch to working code.',526,52,17,sub)
-        b+=f'<path d="M40 78H920" stroke="{line}"/>'
-        b+=letters('Ideas into',36,179,92,fg,True,tracking=-3.5)
-        b+=letters('interfaces.',36,272,92,fg,True,tracking=-3.5)
-        b+=letters('AI applications, web & macOS.',40,330,23,sub)
-        b+=letters('jinsu.build',40,390,19,fg,True)
-        # Transformation from a wireframe to a usable interface. No fabricated UI metrics.
-        b+='<g transform="translate(610 102)">'
-        b+=rect(14,18,262,234,'none',18,line)
-        b+='<path d="M14 69H276M92 18V252M198 18V252M14 160H276" stroke="'+line+'" stroke-dasharray="4 6"/>'
-        b+='<g transform="rotate(-8 161 162)">'
-        b+=rect(38,59,260,250,BLUE,20)
-        b+=f'<path d="M58 103H278" stroke="#698AFC"/>'
-        b+='<circle cx="61" cy="82" r="4" fill="#FFFFFF"/><circle cx="76" cy="82" r="4" fill="#9EB7FF"/><circle cx="91" cy="82" r="4" fill="#9EB7FF"/>'
-        b+=rect(61,124,130,13,'#E7EFFF',6)+rect(61,149,85,8,'#A8C0FF',4)
-        b+=rect(61,180,74,102,'#F2F5FE',10)
-        b+='<path d="M79 244L93 220L106 235L119 205" stroke="#2356F6" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>'
-        b+=rect(147,180,128,46,'#9EB7FF',10)+rect(147,238,128,44,'#466FF8',10)
-        b+='</g>'
-        b+='<path d="M254 206L245 285L267 266L285 301L303 291L283 258L311 256Z" fill="#FFFFFF" stroke="#142C42" stroke-width="4" stroke-linejoin="round"/>'
-        b+='</g>'
-        svg(f'hero-{theme}',960,432,b,'Jinsu Park. Ideas into interfaces.','AI applications, web and macOS. A wireframe becomes a working interface; jinsu.build.')
-
-    # Each cover interprets a real product interaction rather than posing as a screenshot.
-    b=rect(0,0,720,280,'#DCE7EF',14)
-    b+=letters('Sobi Tribunal',28,57,33,INK,True)
-    b+=letters('A second look at spending.',28,91,18,MUTED)
-    b+='<g transform="rotate(9 515 150)"><path d="M411 31H606V237L592 250L578 237L564 250L550 237L536 250L522 237L508 250L494 237L480 250L466 237L452 250L438 237L424 250L411 237Z" fill="#FFFFFF"/>'
-    b+=letters('Think twice.',431,79,23,INK,True)
-    b+='<path d="M431 103H581M431 128H539M431 151H581M431 177H518" stroke="#C5D3DF" stroke-width="6" stroke-linecap="round"/>'
-    b+=rect(430,196,152,26,BLUE,5)+letters('Reflect, then decide.',440,214,12,'#FFFFFF',True)+'</g>'
-    b+='<path d="M31 211H270M270 211L255 196M270 211L255 226" stroke="#2356F6" stroke-width="3" stroke-linecap="round"/>'
-    svg('sobi',720,280,b,'Sobi Tribunal','Project artwork: a receipt invites the user to reflect before deciding. Planning, infrastructure and full v1/v2 implementation.')
-
-    b=rect(0,0,720,280,'#254FD8',14)
-    b+=letters('SpeakUp',28,57,33,'#FFFFFF',True)
-    b+=letters('Find your voice. Play it back.',28,91,18,'#DCE5FF')
-    for i in range(43):
-        x=32+i*15.5; h=14+72*math.exp(-((i-14)/7)**2)*abs(math.sin(i*1.47))+65*math.exp(-((i-33)/5)**2)*abs(math.sin(i*1.37))
-        b+=rect(round(x,2),round(193-h/2,2),5,round(h,2),'#FFFFFF' if i<25 else '#93B9FF',2.5)
-    b+='<circle cx="434" cy="192" r="39" fill="#254FD8" stroke="#FFFFFF" stroke-width="2"/><path d="M425 175L450 192L425 209Z" fill="#FFFFFF"/>'
-    svg('speakup',720,280,b,'SpeakUp','Project artwork: speech waveforms and playback. Speech recognition, LLM coaching and report replay.')
-
-    b=rect(0,0,720,280,'#DFDEF4',14)
-    b+=letters('Vispresso',28,57,33,INK,True)
-    b+=letters('A clearer cut.',28,91,18,MUTED)
-    b+=rect(31,121,422,128,'#202F4C',10)
-    for x in [48,156,264,372]:
-     b+=rect(x,135,67,99,'#485B80',5)
-     b+=f'<path d="M{x} 211L{x+28} 157L{x+67} 203V234H{x}Z" fill="#A4B8D1"/>'
-     b+=f'<circle cx="{x+47}" cy="160" r="11" fill="#D8E3F1"/>'
-    b+=rect(527,87,106,161,'#202F4C',8)
-    b+='<path d="M533 208L578 113L627 202V242H533Z" fill="#A4B8D1"/><circle cx="598" cy="125" r="16" fill="#D8E3F1"/>'
-    b+='<path d="M470 185H506M495 174L507 185L495 196" stroke="#2356F6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'
-    b+='<path d="M514 104V76H539M621 76H646V104M514 230V259H539M621 259H646V230" stroke="#2356F6" stroke-width="3"/>'
-    svg('vispresso',720,280,b,'Vispresso','Project artwork: a filmstrip becomes a vertical edit. Frontend for video preview, timelines and review.')
-
-    b=rect(0,0,720,280,'#E1EBE8',14)
-    b+=letters('Thumbstap',28,57,33,INK,True)
-    b+=letters('One gesture. Everything in reach.',28,91,18,MUTED)
-    b+=rect(31,119,273,130,'#F3F7F5',15,'#BDCDC7')
-    b+='<ellipse cx="230" cy="193" rx="27" ry="34" transform="rotate(-28 230 193)" stroke="#2356F6" stroke-width="2"/><ellipse cx="230" cy="193" rx="12" ry="20" transform="rotate(-28 230 193)" fill="#2356F6"/>'
-    b+='<path d="M331 185H394M383 174L395 185L383 196" stroke="#2356F6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'
-    for row in range(2):
-     for col in range(4):
-      color=['#2356F6','#8EA7C1','#89ACA4','#D6A697'][(row+col)%4]
-      b+=rect(427+col*60,130+row*60,45,45,color,11)
-    svg('thumbstap',720,280,b,'Thumbstap','Project artwork: a thumb gesture on a trackpad opens an app grid. A Swift macOS utility.')
-print('Generated', len(list(OUT.glob('*.svg'))), 'self-contained SVG assets')
+for lang in ('en', 'ko'):
+    name = 'Jinsu Park' if lang == 'en' else '박진수'
+    subtitle = 'Web apps and macOS tools' if lang == 'en' else '웹 서비스와 macOS 앱을 만듭니다'
+    font, size = (EN[0], 133) if lang == 'en' else (KO[6], 145)
+    for theme in ('light', 'dark'):
+        bg, fg, muted, outline = ('#E7EAED','#17202A','#43515F','#A9B4BE') if theme == 'light' else ('#222A32','#F3F5F7','#C1CBD4','#526270')
+        b = f'<rect width="960" height="300" fill="{bg}"/>'
+        b += text_path('github.com/1jsjs', 42, 43, 17, EN[2], muted)
+        b += text_path(name, 54, 194, size, font, 'none', outline)
+        b += text_path(name, 48, 188, size, font, 'none', outline)
+        b += text_path(name, 42, 182, size, font, fg)
+        b += f'<path d="M42 225H918" stroke="{outline}"/>'
+        b += text_path(subtitle, 42, 270, 24, EN[2] if lang=='en' else KO[0], fg)
+        suffix = '-ko' if lang=='ko' else ''
+        title = name + '. ' + subtitle + '.'
+        (OUT / f'hero-{theme}{suffix}.svg').write_text(f'<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300" role="img" aria-labelledby="title"><title id="title">{escape(title)}</title>{b}</svg>')
+print('Generated four bilingual theme-aware headers.')
