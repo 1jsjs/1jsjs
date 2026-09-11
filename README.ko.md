@@ -40,7 +40,7 @@
 
 [판정 로직](https://github.com/1jsjs/sobi-tribunal/blob/c25efc3/services/verdict_service.py) · [모델 연동](https://github.com/1jsjs/sobi-tribunal/blob/c25efc3/services/llm_service.py) · [상세 보기](https://parkjinsu-portfolio.vercel.app/case-studies/sobi-tribunal)
 
-## 스피크업
+## 스픽업
 
 <a href="https://github.com/eecczz/speech-coach"><img src="./assets/cutaway/speakup.png" width="100%" alt="스피크업 소개 그림. 음성·전사 구간이 코칭 피드백, 녹화 다시 보기, MP4 내보내기로 연결됩니다." /></a>
 
