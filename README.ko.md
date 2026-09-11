@@ -1,11 +1,11 @@
 <div align="center">
 
-<strong>English</strong> · <a href="./README.ko.md">한국어</a>
+<a href="https://github.com/1jsjs">English</a> · <strong>한국어</strong>
 
 
 <img src="https://capsule-render.vercel.app/api?type=rect&amp;color=0:0D1117,100:16324F&amp;height=180&amp;text=PARK%20JINSU&amp;fontSize=46&amp;fontColor=FFFFFF&amp;desc=AI%20Products%20%C2%B7%20Web%20%C2%B7%20macOS&amp;descSize=18&amp;descAlignY=72" width="100%" alt="Park Jinsu — AI Products, Web, macOS" />
 
-### Turning ideas into interfaces, APIs, and working products.
+### 아이디어를 화면, API, 그리고 동작하는 제품으로.
 
 I build AI-powered applications across web and macOS.
 
@@ -21,12 +21,12 @@ I build AI-powered applications across web and macOS.
 
 ## About
 
-Hi, I'm **Jinsu Park**. I build interfaces, APIs, and data flows for AI applications, along with practical tools for web and macOS.
+안녕하세요, **박진수**입니다. AI 서비스의 화면·API·데이터 흐름을 구현하고, 웹과 macOS에서 직접 사용할 수 있는 도구를 만듭니다.
 
-- **Build** — I work across LLM and speech APIs, frontend, backend, and deployment.
-- **Own** — For Sobi Tribunal, I handled product planning, infrastructure, and the entire implementation of v1 and v2.
-- **Learn** — I am a Jeonbuk National University student, currently on leave and studying at Furiosa AI Agent School.
-- **Connect** — I am seeking **internship opportunities** in AI application development and full-stack engineering.
+- **Build** — LLM·음성 API 연동부터 프론트엔드, 서버, 배포까지 프로젝트에 필요한 기능을 구현합니다.
+- **Own** — 소비 재판소에서 기획·인프라 구축·v1/v2 전체 개발을 담당했습니다.
+- **Learn** — 전북대학교 재학·휴학 중이며, 퓨리오사 AI 에이전트 스쿨에서 학습하고 있습니다.
+- **Connect** — AI 제품 개발·풀스택 **인턴 기회**를 찾고 있습니다.
 
 ## Selected Projects
 
@@ -34,16 +34,16 @@ Hi, I'm **Jinsu Park**. I build interfaces, APIs, and data flows for AI applicat
 <tr>
 <td width="50%" valign="top">
 
-### 01 / Sobi Tribunal
-**Photo-based AI spending reflection**
+### 01 / 소비 재판소
+**사진 기반 AI 소비 회고 서비스**
 
-A service that turns purchase photos into questions, verdicts, and reflection. I separated rule-based decisions from LLM-generated explanations.
+소비 사진을 바탕으로 질문·판결·회고를 제공하는 서비스. 규칙 기반 판정과 LLM 문장 생성을 분리했습니다.
 
-**Team of 5 · My role: planning, infrastructure, all v1/v2 development**
+**5인 팀 · 기획·인프라·v1/v2 전체 개발**
 
 `Python` `FastAPI` `Bedrock` `EC2` `S3`
 
-🏅 Encouragement Award · Honam SW-centered Universities LLM Hackathon
+🏅 호남권 SW중심대학 LLM 해커톤 장려상
 
 [Source ↗](https://github.com/1jsjs/sobi-tribunal) · [Case study ↗](https://parkjinsu-portfolio.vercel.app/case-studies/sobi-tribunal)
 
@@ -51,15 +51,15 @@ A service that turns purchase photos into questions, verdicts, and reflection. I
 <td width="50%" valign="top">
 
 ### 02 / SpeakUp
-**AI speaking coach**
+**AI 말하기 코칭**
 
-A coaching engine connecting speech recognition and LLMs. I implemented report replay and MP4 export so users can revisit their sessions.
+음성 인식과 LLM을 연결한 코칭 엔진. 결과를 다시 확인할 수 있는 리포트 리플레이와 MP4 내보내기를 구현했습니다.
 
-**Team of 3 · My role: STT/LLM, coaching engine, reports**
+**3인 팀 · STT/LLM·코칭 엔진·리포트**
 
 `Speech-to-Text` `LLM APIs` `Web`
 
-🥉 Bronze Award · Software division, JBNU AI & SW Competition
+🥉 JBNU AI·SW 경진대회 SW부문 동상
 
 [Case study ↗](https://parkjinsu-portfolio.vercel.app/case-studies/speakup)
 
@@ -69,15 +69,15 @@ A coaching engine connecting speech recognition and LLMs. I implemented report r
 <td width="50%" valign="top">
 
 ### 03 / Vispresso
-**Long-form → short-form video review workbench**
+**롱폼 → 숏폼 영상 검수 워크벤치**
 
-A frontend for reviewing and adjusting AI-generated edits. I built the source preview, timeline, and editing-range review interface.
+AI 편집 결과를 사람이 확인하고 조정하는 프론트엔드. 원본 프리뷰·타임라인·편집 구간 검수 UI를 담당했습니다.
 
-**Team of 4 · My role: frontend · Industry project with Jeonju MBC**
+**4인 팀 · 프론트엔드 / 전주MBC 산학 연계**
 
 `Frontend` `Video Preview` `Timeline UI`
 
-🏅 Excellence Award · Software Capstone Design Competition
+🏅 SW캡스톤디자인 경진대회 우수상
 
 [Case study ↗](https://parkjinsu-portfolio.vercel.app/case-studies/vispresso)
 
@@ -85,15 +85,15 @@ A frontend for reviewing and adjusting AI-generated edits. I built the source pr
 <td width="50%" valign="top">
 
 ### 04 / Thumbstap
-**Thumb-gesture launcher for macOS**
+**macOS 엄지 제스처 런처**
 
-A tool that opens an app grid with a thumb double-tap on the trackpad. I implemented gesture detection and user calibration, and released the app.
+트랙패드 엄지 더블탭으로 앱 격자를 여는 도구. 제스처 판별과 사용자 보정을 구현하고 공개했습니다.
 
-**Solo project · Design, development, distribution**
+**개인 프로젝트 · 설계·개발·배포**
 
 `Swift` `SwiftUI` `macOS` `Homebrew`
 
-📦 MIT open source · Install via Homebrew
+📦 MIT 오픈소스 · Homebrew 설치 지원
 
 [Source & install ↗](https://github.com/1jsjs/thumbstap)
 
@@ -103,7 +103,7 @@ A tool that opens an app grid with a thumb double-tap on the trackpad. I impleme
 
 ## Tech Stack
 
-Technologies I have used in projects.
+프로젝트에서 사용한 기술입니다.
 
 **Languages & applications**
 
@@ -113,21 +113,21 @@ Technologies I have used in projects.
 
 <img src="https://skillicons.dev/icons?i=fastapi,nodejs,sqlite,aws,docker,git&amp;theme=dark" alt="FastAPI, Node.js, SQLite, AWS, Docker, Git" />
 
-**AI integration** — OpenAI · Gemini · Amazon Bedrock · STT/LLM integration · Structured outputs · Response validation & fallbacks
+**AI integration** — OpenAI · Gemini · Amazon Bedrock · STT/LLM 연동 · 구조화된 출력 · 응답 검증·폴백
 
 ## Open Source
 
 ### Apple / coremltools
 
-[Fix layer_norm beta shape validation — PR #2736 ↗](https://github.com/apple/coremltools/pull/2736)
+[layer_norm beta shape 검증 수정 — PR #2736 ↗](https://github.com/apple/coremltools/pull/2736)
 
-Fixed a shape-validation bug in the model conversion toolkit and updated the regression test. **Merged · June 2026**
+모델 변환 도구의 shape 검증 버그와 회귀 테스트를 수정했습니다. **Merged · June 2026**
 
 ## Currently Learning
 
-**Machine learning fundamentals → LLMs & RAG → AI applications**
+**머신러닝 기초 → LLM·RAG → AI 서비스 구현**
 
-I practice the material from Furiosa AI Agent School in code and document the concepts I learn.
+퓨리오사 AI 에이전트 스쿨 수강 내용을 코드로 실습하고, 이해한 개념을 정리하고 있습니다.
 
 [Learning notes & practice ↗](https://github.com/1jsjs/furiosa-practice)
 
@@ -135,7 +135,7 @@ I practice the material from Furiosa AI Agent School in code and document the co
 
 <div align="center">
 
-**Open to opportunities to build together.**
+**함께 만들 기회를 찾고 있습니다.**
 
 [Portfolio](https://parkjinsu-portfolio.vercel.app) · [Download CV](https://parkjinsu-portfolio.vercel.app/cv.pdf) · [Get in touch](mailto:jinsu.build@gmail.com)
 
