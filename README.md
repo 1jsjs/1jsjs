@@ -8,7 +8,7 @@ I build AI-powered applications across web and macOS.
 
 <a href="https://parkjinsu-portfolio.vercel.app"><img src="https://img.shields.io/badge/Portfolio-2563EB?style=for-the-badge&amp;logo=googlechrome&amp;logoColor=white" alt="Portfolio" /></a>
 <a href="https://parkjinsu-portfolio.vercel.app/cv"><img src="https://img.shields.io/badge/Resume-334155?style=for-the-badge&amp;logo=readme&amp;logoColor=white" alt="Resume" /></a>
-<a href="mailto:pjs020201@naver.com"><img src="https://img.shields.io/badge/Email-03C75A?style=for-the-badge&amp;logo=naver&amp;logoColor=white" alt="Email" /></a>
+<a href="mailto:jinsu.build@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" alt="Email" /></a>
 
 <br/><br/>
 
@@ -134,6 +134,6 @@ AI 편집 결과를 사람이 확인하고 조정하는 프론트엔드. 원본 
 
 **함께 만들 기회를 찾고 있습니다.**
 
-[Portfolio](https://parkjinsu-portfolio.vercel.app) · [Download CV](https://parkjinsu-portfolio.vercel.app/cv.pdf) · [Get in touch](mailto:pjs020201@naver.com)
+[Portfolio](https://parkjinsu-portfolio.vercel.app) · [Download CV](https://parkjinsu-portfolio.vercel.app/cv.pdf) · [Get in touch](mailto:jinsu.build@gmail.com)
 
 </div>
