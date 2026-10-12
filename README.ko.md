@@ -10,7 +10,7 @@
 
 안녕하세요. 웹 서비스와 macOS 앱을 만드는 박진수입니다. 최근에는 트랙패드 앱 런처, 말하기 코칭, 영상 편집 결과를 검수하는 화면을 만들었습니다.
 
-[포트폴리오](https://parkjinsu-portfolio.vercel.app) &nbsp; / &nbsp; [이력서](https://parkjinsu-portfolio.vercel.app/cv) &nbsp; / &nbsp; [jinsu.build@gmail.com](mailto:jinsu.build@gmail.com)
+[포트폴리오](https://parkjinsu.com) &nbsp; / &nbsp; [이력서](https://parkjinsu.com/resume.html) &nbsp; / &nbsp; [jinsu.build@gmail.com](mailto:jinsu.build@gmail.com)
 
 [Apple의 coremltools에 보낸 수정도 병합됐습니다.](https://github.com/apple/coremltools/pull/2736) `layer_norm`의 beta shape 검증 버그를 고치고 회귀 테스트를 수정했습니다.
 
@@ -38,7 +38,7 @@
 
 호남권 SW중심대학 LLM 해커톤 장려상.
 
-[판정 로직](https://github.com/1jsjs/sobi-tribunal/blob/c25efc3/services/verdict_service.py) · [모델 연동](https://github.com/1jsjs/sobi-tribunal/blob/c25efc3/services/llm_service.py) · [상세 보기](https://parkjinsu-portfolio.vercel.app/case-studies/sobi-tribunal)
+[판정 로직](https://github.com/1jsjs/sobi-tribunal/blob/c25efc3/services/verdict_service.py) · [모델 연동](https://github.com/1jsjs/sobi-tribunal/blob/c25efc3/services/llm_service.py) · [상세 보기](https://parkjinsu.com/portfolio.html#sobi)
 
 ## 스픽업
 
@@ -52,7 +52,7 @@
 
 JBNU AI·SW 경진대회 SW부문 동상.
 
-[코칭 엔진](https://github.com/eecczz/speech-coach/blob/007b080/apps/web/src/realtime-coaching.ts) · [다시 보기·내보내기](https://github.com/eecczz/speech-coach/blob/007b080/apps/web/src/report-page.ts) · [상세 보기](https://parkjinsu-portfolio.vercel.app/case-studies/speakup)
+[코칭 엔진](https://github.com/eecczz/speech-coach/blob/007b080/apps/web/src/realtime-coaching.ts) · [다시 보기·내보내기](https://github.com/eecczz/speech-coach/blob/007b080/apps/web/src/report-page.ts) · [상세 보기](https://parkjinsu.com/portfolio.html#speakup)
 
 ## 비스프레소
 
@@ -66,7 +66,7 @@ JBNU AI·SW 경진대회 SW부문 동상.
 
 SW캡스톤디자인 경진대회 우수상.
 
-[검수 화면](https://github.com/Me1e/jbnu_capstone_vispresso/blob/9a8ae50/src/components/job-space/segment-review-v2.tsx) · [타임라인 조작](https://github.com/Me1e/jbnu_capstone_vispresso/blob/9a8ae50/src/lib/editor-timeline.ts) · [상세 보기](https://parkjinsu-portfolio.vercel.app/case-studies/vispresso)
+[검수 화면](https://github.com/Me1e/jbnu_capstone_vispresso/blob/9a8ae50/src/components/job-space/segment-review-v2.tsx) · [타임라인 조작](https://github.com/Me1e/jbnu_capstone_vispresso/blob/9a8ae50/src/lib/editor-timeline.ts) · [상세 보기](https://parkjinsu.com/portfolio.html#vispresso)
 
 <sub>이미지는 각 프로젝트의 화면과 기능을 바탕으로 만든 소개 그림입니다. 실제 구현은 연결된 코드에서 확인할 수 있습니다.</sub>
 
@@ -77,9 +77,9 @@ SW캡스톤디자인 경진대회 우수상.
 AI API와 배포: OpenAI, Gemini, Amazon Bedrock, EC2, S3, Docker
 
 <details>
-<summary>지금 공부하는 것</summary>
+<summary>최근에 공부한 것</summary>
 
-퓨리오사 AI 에이전트 스쿨에서 머신러닝 기초와 LLM, RAG를 공부하고 있습니다. 수업 실습 코드는 [furiosa-practice](https://github.com/1jsjs/furiosa-practice)에 올립니다.
+2026년 8월부터 10월까지 퓨리오사 AI 에이전트 스쿨에서 머신러닝 기초와 LLM, RAG를 공부했습니다. 수업 실습 코드는 [furiosa-practice](https://github.com/1jsjs/furiosa-practice)에 있습니다.
 
 전북대학교 학생이며 현재는 휴학 중입니다.
 
@@ -89,4 +89,4 @@ AI API와 배포: OpenAI, Gemini, Amazon Bedrock, EC2, S3, Docker
 
 AI 서비스 개발이나 풀스택 인턴 자리를 찾고 있습니다.
 
-[연락하기](mailto:jinsu.build@gmail.com) &nbsp; / &nbsp; [이력서 다운로드](https://parkjinsu-portfolio.vercel.app/cv.pdf)
+[연락하기](mailto:jinsu.build@gmail.com) &nbsp; / &nbsp; [이력서 보기](https://parkjinsu.com/resume.html)

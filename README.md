@@ -10,7 +10,7 @@
 
 Hi, I'm Jinsu. I build web apps and macOS tools. My recent work includes a trackpad launcher, speech coaching, and interfaces for reviewing video edits.
 
-[Portfolio](https://parkjinsu-portfolio.vercel.app) &nbsp; / &nbsp; [Resume](https://parkjinsu-portfolio.vercel.app/cv) &nbsp; / &nbsp; [jinsu.build@gmail.com](mailto:jinsu.build@gmail.com)
+[Portfolio](https://parkjinsu.com) &nbsp; / &nbsp; [Resume](https://parkjinsu.com/resume.html) &nbsp; / &nbsp; [jinsu.build@gmail.com](mailto:jinsu.build@gmail.com)
 
 I also contributed a [merged fix to Apple’s coremltools](https://github.com/apple/coremltools/pull/2736): correcting `layer_norm` beta shape validation and updating the regression test.
 
@@ -38,7 +38,7 @@ We entered the hackathon as a team of five. I planned the product, set up the in
 
 Encouragement Award, Honam LLM Hackathon.
 
-[Verdict logic](https://github.com/1jsjs/sobi-tribunal/blob/c25efc3/services/verdict_service.py) · [Model integration](https://github.com/1jsjs/sobi-tribunal/blob/c25efc3/services/llm_service.py) · [Project details](https://parkjinsu-portfolio.vercel.app/case-studies/sobi-tribunal)
+[Verdict logic](https://github.com/1jsjs/sobi-tribunal/blob/c25efc3/services/verdict_service.py) · [Model integration](https://github.com/1jsjs/sobi-tribunal/blob/c25efc3/services/llm_service.py) · [Project details](https://parkjinsu.com/portfolio.html#sobi)
 
 ## SpeakUp
 
@@ -52,7 +52,7 @@ On this team of three, I built the STT/LLM integration and coaching engine. I al
 
 Bronze Award, JBNU AI & SW Competition, software division.
 
-[Coaching engine](https://github.com/eecczz/speech-coach/blob/007b080/apps/web/src/realtime-coaching.ts) · [Replay and export](https://github.com/eecczz/speech-coach/blob/007b080/apps/web/src/report-page.ts) · [Project details](https://parkjinsu-portfolio.vercel.app/case-studies/speakup)
+[Coaching engine](https://github.com/eecczz/speech-coach/blob/007b080/apps/web/src/realtime-coaching.ts) · [Replay and export](https://github.com/eecczz/speech-coach/blob/007b080/apps/web/src/report-page.ts) · [Project details](https://parkjinsu.com/portfolio.html#speakup)
 
 ## Vispresso
 
@@ -66,7 +66,7 @@ I handled the frontend on a team of four. I built the source preview, timeline, 
 
 Excellence Award, Software Capstone Design Competition.
 
-[Review workbench](https://github.com/Me1e/jbnu_capstone_vispresso/blob/9a8ae50/src/components/job-space/segment-review-v2.tsx) · [Timeline controls](https://github.com/Me1e/jbnu_capstone_vispresso/blob/9a8ae50/src/lib/editor-timeline.ts) · [Project details](https://parkjinsu-portfolio.vercel.app/case-studies/vispresso)
+[Review workbench](https://github.com/Me1e/jbnu_capstone_vispresso/blob/9a8ae50/src/components/job-space/segment-review-v2.tsx) · [Timeline controls](https://github.com/Me1e/jbnu_capstone_vispresso/blob/9a8ae50/src/lib/editor-timeline.ts) · [Project details](https://parkjinsu.com/portfolio.html#vispresso)
 
 <sub>The images are illustrations based on the projects’ interfaces and features. The source links show the implementation.</sub>
 
@@ -77,9 +77,9 @@ Backend: Python, FastAPI, Node.js, SQLite<br/>
 AI APIs and deployment: OpenAI, Gemini, Amazon Bedrock, EC2, S3, Docker
 
 <details>
-<summary>What I'm learning now</summary>
+<summary>What I recently studied</summary>
 
-I'm studying machine learning fundamentals, LLMs, and RAG at Furiosa AI Agent School. My practice code is in [furiosa-practice](https://github.com/1jsjs/furiosa-practice).
+From August to October 2026, I studied machine learning fundamentals, LLMs, and RAG at Furiosa AI Agent School. My practice code is in [furiosa-practice](https://github.com/1jsjs/furiosa-practice).
 
 I'm a Jeonbuk National University student, currently on leave.
 
@@ -89,4 +89,4 @@ I'm a Jeonbuk National University student, currently on leave.
 
 I'm looking for an internship in AI application development or full-stack engineering.
 
-[Email me](mailto:jinsu.build@gmail.com) &nbsp; / &nbsp; [Download CV](https://parkjinsu-portfolio.vercel.app/cv.pdf)
+[Email me](mailto:jinsu.build@gmail.com) &nbsp; / &nbsp; [View résumé](https://parkjinsu.com/resume.html)
